@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,12 @@ Route::get('/about', function(){
 });
 Route::get('/produk', function(){
     return view('produk');
+});
+
+Route::middleware('guest')->group(function(){
+
+    // Registrasi route
+    Route::get('/registrasi',[LoginController::class, 'registrasi']);
+    Route::post('/registrasi',[LoginController::class, 'register']);
+
 });

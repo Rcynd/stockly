@@ -57,8 +57,7 @@
   <div class="container d-flex justify-content-center  col-lg-6">
       <div class="card">
         <div class="d-flex justify-content-center align-items-center">
-            <img src="asset/image/indomie.jpg" width="30%" alt="...">
-            <p class="bold" style="font-size:4em;">+</p>
+            <img src="asset/image/indomie.jpg" class="me-3" width="30%" alt="...">
             <img src="asset/image/sarimie.jpg" width="30%" alt="...">
         </div>
         <div class="card-body">

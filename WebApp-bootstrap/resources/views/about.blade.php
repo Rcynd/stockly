@@ -60,4 +60,24 @@
             </div>
         </div>
     </div>
+
+    <h5 class="text-center mt-3 tulisan">masukan untuk website atau toko atau pertanyaan dapat dikirimkan melalui form berikut, sekdar menyapapun boleh kok ;)</h5>
+    <div class="container mb-5">
+        <form action="" method="post" >
+            @csrf
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="masukkan nama">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">alamat Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Masukan</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger">Kirim</button>
+        </form>
+    </div>
 @endsection

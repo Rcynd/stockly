@@ -26,7 +26,7 @@
                     </ul>
                 </li> --}}
             </ul>
-                <a class="login-link me-2" href="">Login</a>
+                <a class="login-link me-2" href="{{ asset('login') }}">Login</a>
             </ul>
         </div>
     </div>

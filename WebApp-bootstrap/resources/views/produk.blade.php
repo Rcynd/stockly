@@ -8,7 +8,7 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
 </div>
-<div class="container d-flex justify-content-around align-items-center flex-wrap">
+<div class="container d-flex justify-content-around align-items-center flex-wrap mb-5">
     <div class="card" style="width:14rem;">
         <img src="asset/image/indomie.jpg" class="card-img-top" alt="...">
         <div class="card-body">
