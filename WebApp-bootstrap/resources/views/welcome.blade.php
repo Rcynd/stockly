@@ -15,7 +15,7 @@
           <div class="carousel-caption text-start">
             <h1>Daftarkan akun</h1>
             <p>Temukan barang yang Anda perlukan dengan mudah di Stockly. <br> Daftarkan akun Anda sekarang dan nikmati kemudahannya!</p>
-            <p><a class="btn btn-lg btn-danger" href="#">Daftar Sekarang</a></p>
+            <p><a class="btn btn-lg btn-danger" href="{{ asset('registrasi') }}">Daftar Sekarang</a></p>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
           <div class="carousel-caption">
             <h1>Lihat produk Tersedia</h1>
             <p>Stockly menyediakan ribuan produk sehari-hari dengan harga terjangkau. Jangan lewatkan kesempatan untuk melihat barang-barang berkualitas yang kami tawarkan!</p>
-            <p><a class="btn btn-lg btn-danger" href="#">Lihat lebih</a></p>
+            <p><a class="btn btn-lg btn-danger" href="{{ asset('produk') }}">Lihat lebih</a></p>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
           <div class="carousel-caption text-end">
             <h1>Pesan produk</h1>
             <p>Jangan sampai kehabisan stok barang yang kamu butuhkan. <br> Pesan sekarang juga di Stockly dan nikmati kemudahan berbelanja online!</p>
-            <p><a class="btn btn-lg btn-danger" href="#">Pesan</a></p>
+            <p><a class="btn btn-lg btn-danger" href="{{ asset('pesan') }}">Pesan</a></p>
           </div>
         </div>
       </div>
@@ -51,6 +51,10 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
+  @if (isset(auth()->user()->name))
+  <h2 class="text-center tulisan mt-3">Selamat Datang {{ auth()->user()->name }}!</h2>
+  @endif
 
   <h2 class="text-center tulisan mt-3">Promo Terbatas!</h2>
 
