@@ -26,7 +26,11 @@
                     </ul>
                 </li> --}}
             </ul>
+                @if (isset(auth()->user()->name))
+                <a class="login-link me-2" href="{{ asset('login') }}">Dashboard</a>
+                @else
                 <a class="login-link me-2" href="{{ asset('login') }}">Login</a>
+                @endif
             </ul>
         </div>
     </div>
