@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    <h5 class="text-center mt-3 tulisan">masukan untuk website atau toko atau pertanyaan dapat dikirimkan melalui form berikut, sekdar menyapapun boleh kok ;)</h5>
+    <h5 class="text-center mt-3 tulisan">masukan, saran atau kritik untuk website atau toko atau pertanyaan <br> dapat dikirimkan melalui form berikut, sekedar menyapapun boleh kok ;)</h5>
     <div class="container mb-5">
         <form action="" method="post" >
             @csrf
