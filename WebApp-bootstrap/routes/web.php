@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
+use Illuminate\Auth\Events\Login;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +32,16 @@ Route::middleware('guest')->group(function(){
     // Registrasi route
     Route::get('/registrasi',[LoginController::class, 'registrasi']);
     Route::post('/registrasi',[LoginController::class, 'register']);
+    
+    // Login route
+    Route::get('/login',[LoginController::class, 'index'])->name('login');
+    Route::post('/login',[LoginController::class, 'authenticate']);
+    
+});
+Route::middleware('auth')->group(function(){
+    // admin logout
+    Route::get('/logout',[LoginController::class, 'logout']);
+    // admin dashboard
+    Route::get('/dashboard',[DashboardController::class, 'index']);
 
 });
