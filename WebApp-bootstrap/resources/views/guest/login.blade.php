@@ -10,6 +10,11 @@
               {{ session('loginError') }}
             </div>
             @endif
+            @if (session()->has('sukses'))
+            <div class="alert alert-success col-lg-7 text-center" role="alert">
+              {{ session('sukses') }}
+            </div>
+            @endif
             <main class="col-lg-7">
                 <article >
                     <form action="{{ asset('login') }}" enctype="multipart/form-data" method="post">
