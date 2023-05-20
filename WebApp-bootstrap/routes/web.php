@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProdukController;
 use Illuminate\Auth\Events\Login;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -38,10 +39,17 @@ Route::middleware('guest')->group(function(){
     Route::post('/login',[LoginController::class, 'authenticate']);
     
 });
-Route::middleware('auth')->group(function(){
+Route::middleware(['auth'])->group(function(){
     // admin logout
     Route::get('/logout',[LoginController::class, 'logout']);
     // admin dashboard
     Route::get('/dashboard',[DashboardController::class, 'index']);
+    
+});
+Route::middleware(['admin'])->group(function(){
+    
+    // cek produk
+    Route::get('/produk-adm',[ProdukController::class, 'index']);
+
 
 });

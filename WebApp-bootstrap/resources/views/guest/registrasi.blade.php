@@ -9,9 +9,10 @@
                 <article >
                     <form action="{{ asset('registrasi') }}" method="post">
                     @csrf
+                    <input type="hidden" name="level" class="form-control" id="level" value="pelanggan">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama</label>
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Rian Muhammad Afriansyah">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Rian Muhammad Afriansyah" value="{{ old('name') }}">
                         @error('name')
                         <div class="text-danger">
                         {{ $message }}
@@ -20,7 +21,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Alamat Email</label>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" value="{{ old('email') }}">
                         @error('email')
                         <div class="text-danger">
                         {{ $message }}
@@ -29,7 +30,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="no_telp" class="form-label">No.Telepon</label>
-                        <input type="text" name="no_telp" class="form-control" id="no_telp" placeholder="0896xxxxxx33">
+                        <input type="text" name="no_telp" class="form-control" id="no_telp" placeholder="0896xxxxxx33" value="{{ old('no_telp') }}">
                         @error('no_telp')
                         <div class="text-danger">
                         {{ $message }}
@@ -54,7 +55,7 @@
                     </form>
                 </article>
             </main>
-            <footer class="mt-3 text-center bg-danger text-light p-1">
+            <footer class="fixed-bottom mt-3 text-center bg-danger text-light p-1">
                 <p>Sudah punya akun? silahkan untuk <a href="{{ asset('login') }}">Login di sini</a></p>
             </footer>
         </div>    
