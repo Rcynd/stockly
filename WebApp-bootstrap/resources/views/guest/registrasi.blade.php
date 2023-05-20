@@ -2,7 +2,7 @@
 @section('content')
     <div class="">
         <div class="row justify-content-center p-0 m-0 ">
-            <header class="d-flex justify-content-center bg-danger col-lg-7 shadow-sm p-3 text-light mb-3">
+            <header class="d-flex justify-content-center bg-danger shadow-sm p-3 text-light mb-3">
                 <h2>Registrasi Akun</h2>
             </header>
             <main class="col-lg-7">
@@ -50,10 +50,11 @@
                         @enderror
                     </div>
                     <button type="submit" class="btn btn-danger">Register</button>
+                    <a href="{{ asset('/') }}" type="submit" class="btn btn-primary float-end">Back</a>
                     </form>
                 </article>
             </main>
-            <footer class="mt-3 text-center bg-danger text-light p-1 col-lg-7">
+            <footer class="mt-3 text-center bg-danger text-light p-1">
                 <p>Sudah punya akun? silahkan untuk <a href="{{ asset('login') }}">Login di sini</a></p>
             </footer>
         </div>    
