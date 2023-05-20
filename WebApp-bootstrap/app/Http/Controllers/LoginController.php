@@ -51,7 +51,8 @@ class LoginController extends Controller
             'name' => 'required',
             'email' => 'required|unique:users',
             'password' => 'required|min:6|max:255|confirmed',
-            'no_telp' => 'required|numeric',
+            'no_telp' => 'required|numeric|unique:users',
+            'level' => 'required'
         ],[
             'email.unique' => 'email yang anda masukkan sudah terdaftar!',
             'password.min' => 'password minimal berisi 6 karakter!',
