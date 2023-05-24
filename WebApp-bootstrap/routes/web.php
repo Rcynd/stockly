@@ -50,6 +50,8 @@ Route::middleware(['admin'])->group(function(){
     
     // cek produk
     Route::get('/produk-adm',[ProdukController::class, 'index']);
+    Route::get('/tambah-produk',[ProdukController::class, 'tambah']);
+    Route::post('/tambah-produk',[ProdukController::class, 'store']);
 
 
 });
