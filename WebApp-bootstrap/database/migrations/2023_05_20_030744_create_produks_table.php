@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('produks', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_produk');
+            $table->foreignId('jenis')->nullable();
+            $table->string('name_produk');
             $table->integer('harga');
-            $table->integer('s');
+            $table->integer('stock');
+            $table->string('image');
+            $table->enum('status',['ready','pending','sold']);
             $table->timestamps();
         });
     }
